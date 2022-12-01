@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register
+{% endblock %}
+
+{% block body %}
+
+	<section class="bodyRegister">
+
+		<div>
+
+			<div class="spaceRegister2">
+				<h1>TECHNO-MARKET<br>Enregistrement</h1>
+			</div>
+
+			{{ form_start(registrationForm) }}
+
+			<div class="spaceLogin3">
+				{{ form_row(registrationForm.email) }}
+			</div>
+			<div class="spaceLogin3">
+				{{ form_row(registrationForm.pseudo) }}
+			</div>
+			<div class="spaceLogin3">
+				{{ form_row(registrationForm.plainPassword, {
+            label: 'Password'}) }}
+			</div>
+			<div class="spaceLogin3">
+				{{ form_row(registrationForm.agreeTerms) }}
+			</div>
+			<div class="spaceLogin1">
+				{{ form_end(registrationForm) }}
+				<button type="submit" class="btn buttonColor">Register</button>
+			</div>
+
+		</div>
+
+	</section>
+
+{% endblock %}
